@@ -36,5 +36,15 @@ public class PhoneBookTest {
         assertEquals(expectedNumber, resultNumber);
         assertEquals(expectedEntries, resultEntries2);
     }
+    @Test
+    public void testFindByNumber() {
+        //arrange
+        String expectedName = "Alisa";
+        sut.addContact("Alisa", "+79998888888");
+        //act
+        String resultName = sut.findByNumber("+79998888888");
+        //assert
+        assertEquals(expectedName, resultName);
+    }
 
 }

@@ -12,4 +12,7 @@ public class PhoneBook {
         }
         return contactsMap.size();
     }
+    public String findByNumber(String number) {
+        return null;
+    }
 }
