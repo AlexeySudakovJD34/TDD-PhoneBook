@@ -29,7 +29,7 @@ public class PhoneBookTest {
         String expectedNumber = "+79999999999";
         int expectedEntries = 2;
         //act
-        int resultEntries1 = sut.addContact("Nikolay", "+79999999999");
+        sut.addContact("Nikolay", "+79999999999");
         int resultEntries2 = sut.addContact("Alisa", "+79998888888");
         String resultNumber = sut.contactsMap.get("Nikolay");
         //assert

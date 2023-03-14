@@ -1,5 +1,6 @@
 package org.example;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
@@ -13,6 +14,10 @@ public class PhoneBook {
         return contactsMap.size();
     }
     public String findByNumber(String number) {
-        return null;
+        String name = "No Records Found";
+        for (String key : contactsMap.keySet()) {
+            if (contactsMap.get(key).equals(number)) name = key;
+        }
+        return name;
     }
 }
