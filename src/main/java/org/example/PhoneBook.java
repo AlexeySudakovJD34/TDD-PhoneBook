@@ -10,6 +10,6 @@ public class PhoneBook {
         if (!contactsMap.containsKey(name)) {
             contactsMap.put(name, number);
         }
-        return 0;
+        return contactsMap.size();
     }
 }
