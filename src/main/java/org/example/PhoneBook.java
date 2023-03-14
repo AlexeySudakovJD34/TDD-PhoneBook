@@ -24,8 +24,6 @@ public class PhoneBook {
     }
     public void printAllNames() {
         System.out.println("Phonebook contains following names:");
-        for (String key : contactsMap.keySet()) {
-            System.out.println(key);
-        }
+        contactsMap.forEach((name, number) -> System.out.println(name));
     }
 }
