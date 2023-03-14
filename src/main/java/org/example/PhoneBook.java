@@ -14,14 +14,14 @@ public class PhoneBook {
         return contactsMap.size();
     }
     public String findByNumber(String number) {
-        String name = "No Records Found";
         for (String key : contactsMap.keySet()) {
-            if (contactsMap.get(key).equals(number)) name = key;
+            if (contactsMap.get(key).equals(number)) return key;
         }
-        return name;
+        return "No Records Found";
     }
     public String findByName(String name) {
-        return null;
+        if (contactsMap.containsKey(name)) return contactsMap.get(name);
+        else return "No Records Found";
     }
 
 }
